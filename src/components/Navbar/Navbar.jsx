@@ -4,6 +4,7 @@ import { IoMdSearch } from "react-icons/io";
 import { FaCartShopping } from 'react-icons/fa6';
 import { FaCaretDown } from 'react-icons/fa';
 import DarkMode from './DarkMode';
+import { IoLogInOutline } from "react-icons/io5";
 
 const Menu = [
   {
@@ -54,21 +55,21 @@ const DropdownLinks = [
 const Navbar = () => {
   return (
   <div className='shadow-md bg-white 
-  dark:bg-gray-900 dark:text-white duration-200
+  dark:bg-gray-800 dark:text-white duration-200
   relative z-40'>
     {/* { upper Navbar} */}
     <div className='bg-primary/40 py-2'>
-      <div className='container flex justify-between items-center'>
+      <div className='container mx-auto px-4 sm:px-8 md:px-16 lg:px-24 xl:px-32 max-w-7xl flex justify-between items-center'>
         <div>
           <a href="#"
-          className='font-bold text-2xl sm:text-3xl flex gap-2'>
+          className='font-bold text-2xl sm:text-3xl flex gap-3'>
             <img src={Logo} alt="Logo" 
             className="w-10"/>
             Shopsy
           </a>
         </div>
         {/* searh bar  */}
-        <div className='flex justify-between items-center gap-4'>
+        <div className='flex justify-between items-center gap-2'>
           <div className='relative group hidden sm:block'>
             <input 
               type="text"
@@ -87,7 +88,6 @@ const Navbar = () => {
             group-hover:text-primary absolute
             top-1/2 -translate-y-1/2 right-3' />
           </div>
-        
         {/* order button */}
         <button
           onClick={() => alert("Ordering not available yet")}
@@ -104,6 +104,24 @@ const Navbar = () => {
             text-white drop-shadow-sm
             cursor-pointer'/>
         </button>
+
+        {/* Login button */}
+        <button
+          onClick={() => alert("Login functionality not implemented yet")}
+          className='bg-gradient-to-r from-primary
+          to-secondary transition-all duration-200
+          text-white py-1 px-4 rounded-full flex
+          items-center gap-3 group ml-2'
+        >
+          <span className='group-hover:block
+          hidden transition-all duration-200'>
+            Login
+          </span>
+          <IoLogInOutline className='text-xl
+            text-white drop-shadow-sm
+            cursor-pointer'/>
+        </button>
+
         {/* DarkMode switch*/}
         <div>
           <DarkMode />
@@ -143,7 +161,7 @@ const Navbar = () => {
           </a>
           <div className='absolute z-[9999] hidden
           group-hover:block w-[150px] rounded-md
-          bg-white p-2 text-black shadow-md' >
+          bg-white p-2 text-black  shadow-md' >
             <ul>
               {DropdownLinks.map((data) => (
                 <li key={data.id}>

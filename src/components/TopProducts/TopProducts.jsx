@@ -85,7 +85,8 @@ const TopProducts = () => {
                     rounded-full mt-4 group-hover:bg-white
                     group-hover:text-primary'
                     
-                  >Order Now</button>
+                  >Order Now
+                  </button>
                 </div>
               </div>
             ))}
