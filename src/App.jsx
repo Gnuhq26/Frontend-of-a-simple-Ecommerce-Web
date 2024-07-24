@@ -1,15 +1,11 @@
 import { useEffect } from 'react';
-import { BrowserRouter } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar/Navbar';
-import Hero from './components/Hero/Hero';
-import Products from './components/Products/Products';
 import AOS from "aos";
 import 'aos/dist/aos.css';
-import TopProducts from './components/TopProducts/TopProducts';
-import Banner from './components/Banner/Banner';
-import Subscribe from './components/Subscribe/Subscribe';
-import Testimonials from './components/Testimonials/Testimonials';
-import Footer from './components/Footer/Footer'
+import Login from './components/Login/Login';
+import Home from './components/Home/Home';
+
 
 const App = () => {
   useEffect(() => {
@@ -23,19 +19,15 @@ const App = () => {
   }, []);
 
   return (
-    <BrowserRouter>
+    <Router>
       <div className='bg-white dark:bg-gray-900 dark:text-white duration-200'>
         <Navbar/>
-        <Hero/>
-        <Products/>
-        <TopProducts/>
-        <Banner/>
-        <Subscribe/>
-        <Products/>
-        <Testimonials/>
-        <Footer/>
+        <Routes>
+          <Route path='/' element={<Home/>} />
+          <Route path='/login' element={<Login/>} />
+        </Routes>
       </div>
-    </BrowserRouter>
+    </Router>
   )
 }
 

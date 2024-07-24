@@ -113,38 +113,39 @@ const Navbar = () => {
             top-1/2 -translate-y-1/2 right-3' />
           </div>
         {/* order button */}
-        <button
-          onClick={() => alert("Ordering not available yet")}
-          className='bg-gradient-to-r from-primary
-          to-secondary transition-all duration-200
-          text-white py-1 px-4 rounded-full flex
-          items-center gap-3 group'
-        >
-          <span className='group-hover:block
-          hidden transition-all duration-200'>
-            Order
-          </span>
-          <FaCartShopping className='text-xl
-            text-white drop-shadow-sm
-            cursor-pointer'/>
-        </button>
-
+        <Link to="/login">
+          <button
+            className='bg-gradient-to-r from-primary
+            to-secondary transition-all duration-200
+            text-white py-1 px-4 rounded-full flex
+            items-center gap-3 group'
+          >
+            <span className='group-hover:block
+            hidden transition-all duration-200'>
+              Order
+            </span>
+            <FaCartShopping className='text-xl
+              text-white drop-shadow-sm
+              cursor-pointer'/>
+          </button>
+        </Link>
         {/* Login button */}
-        <button
-          onClick={() => alert("Login functionality not implemented yet")}
-          className='bg-gradient-to-r from-primary
-          to-secondary transition-all duration-200
-          text-white py-1 px-4 rounded-full flex
-          items-center gap-3 group ml-2'
-        >
-          <span className='group-hover:block
-          hidden transition-all duration-200'>
-            Login
-          </span>
-          <IoLogInOutline className='text-xl
-            text-white drop-shadow-sm
-            cursor-pointer'/>
-        </button>
+        <Link to="/login">
+          <button
+            className='bg-gradient-to-r from-primary
+            to-secondary transition-all duration-200
+            text-white py-1 px-4 rounded-full flex
+            items-center gap-3 group ml-2'
+          >
+            <span className='group-hover:block
+            hidden transition-all duration-200'>
+              Login
+            </span>
+            <IoLogInOutline className='text-xl
+              text-white drop-shadow-sm
+              cursor-pointer'/>
+          </button>
+        </Link>
 
         {/* DarkMode switch*/}
         <div>
