@@ -1,10 +1,11 @@
-
+// import { useState, useEffect } from 'react';
 import Logo from '../../assets/logo.png';
 import { IoMdSearch } from "react-icons/io";
 import { FaCartShopping } from 'react-icons/fa6';
 import { FaCaretDown } from 'react-icons/fa';
 import DarkMode from './DarkMode';
 import { IoLogInOutline } from "react-icons/io5";
+import { Link } from "react-router-dom"; 
 
 const Menu = [
   {
@@ -53,6 +54,29 @@ const DropdownLinks = [
 ];
 
 const Navbar = () => {
+
+  // const [click, setClick] = useState(false);
+  // const [button, setButton] = useState(true);
+
+  // const handleClick = () => setClick(!click);
+  // const closeMobileMenu = () => setClick(false);
+
+  // const showButton = () => {
+  //   if (window.innerWidth <= 960) {
+  //     setButton(false);
+  //   } else {
+  //     setButton(true);
+  //   }
+  // };
+
+  // useEffect(() => {
+  //   showButton();
+  //   window.addEventListener('resize', showButton);
+  //   return () => {
+  //     window.removeEventListener('resize', showButton);
+  //   };
+  // }, []);
+
   return (
   <div className='shadow-md bg-white 
   dark:bg-gray-800 dark:text-white duration-200
@@ -61,12 +85,12 @@ const Navbar = () => {
     <div className='bg-primary/40 py-2'>
       <div className='container mx-auto px-4 sm:px-8 md:px-16 lg:px-24 xl:px-32 max-w-7xl flex justify-between items-center'>
         <div>
-          <a href="#"
+        <Link to="/"
           className='font-bold text-2xl sm:text-3xl flex gap-3'>
-            <img src={Logo} alt="Logo" 
+          <img src={Logo} alt="Logo" 
             className="w-10"/>
             Shopsy
-          </a>
+        </Link>
         </div>
         {/* searh bar  */}
         <div className='flex justify-between items-center gap-2'>
