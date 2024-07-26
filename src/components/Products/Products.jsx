@@ -96,8 +96,8 @@ const Products = () => {
             <div className='flex justify-center'>
               <button className='text-center mt-10
               cursor-pointer bg-primary text-white
-              py-1 px-5  rounded-md'>
-                Order Now
+              py-1 px-5  rounded-full'>
+                Order Nowwww
               </button>
             </div>
         </div>
