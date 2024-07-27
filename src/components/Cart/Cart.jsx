@@ -71,7 +71,7 @@ const CartPage = () => {
                 <input 
                   type="number" 
                   value={item.quantity} 
-                  className="w-16 border rounded p-1 dark:text-black" 
+                  className="w-16 border rounded p-1 dark:text-black dark:bg-gray-300" 
                   min="1"
                   onChange={(e) => updateQuantity(item.id, parseInt(e.target.value))}
                 />
@@ -113,12 +113,12 @@ const CartPage = () => {
           <div className="flex">
             <input 
               type="text" 
-              className="border p-2 flex-grow"
+              className="border p-2 flex-grow dark:text-gray-900"
               placeholder="promo code"
               value={promoCode}
               onChange={(e) => setPromoCode(e.target.value)}
             />
-            <button className="bg-black text-white px-4 py-2 ml-2">Submit</button>
+            <button className="bg-primary dark:bg-primary/100 text-white px-4 py-2 ml-2">Submit</button>
           </div>
         </div>
       </div>
