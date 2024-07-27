@@ -2,6 +2,7 @@ import { useState } from 'react';
 import Img1 from '../../assets/Products/pro4.jpg';
 import Img2 from '../../assets/Products/pro2.jpg';
 import Img3 from '../../assets/Products/pro3.jpg';
+import { MdDeleteOutline } from "react-icons/md";
 
 const CartPage = () => {
   const [cartItems, setCartItems] = useState([
@@ -70,7 +71,7 @@ const CartPage = () => {
                 <input 
                   type="number" 
                   value={item.quantity} 
-                  className="w-16 border rounded p-1" 
+                  className="w-16 border rounded p-1 dark:text-black" 
                   min="1"
                   onChange={(e) => updateQuantity(item.id, parseInt(e.target.value))}
                 />
@@ -78,8 +79,11 @@ const CartPage = () => {
               <td className="py-4">${item.price * item.quantity}</td>
               <td className="py-4">
                 <button onClick={() => removeItem(item.id)} 
-                  className=" bg-red-500 w-20 h-8 text-white font-semibold rounded-full shadow-black">
-                  Del
+                  className=" bg-red-500 w-20 h-8 text-white 
+                  font-semibold rounded-full shadow-black">
+                  <MdDeleteOutline 
+                    className='mx-auto size-5'
+                  />
                 </button>
               </td>
             </tr>
