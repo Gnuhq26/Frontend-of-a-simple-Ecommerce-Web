@@ -4,6 +4,7 @@ import Navbar from './components/Navbar/Navbar';
 import AOS from "aos";
 import 'aos/dist/aos.css';
 import Home from './components/Home/Home';
+import Cart from './components/Cart/Cart';
 
 
 const App = () => {
@@ -23,6 +24,7 @@ const App = () => {
         <Navbar/>
         <Routes>
           <Route path='/' element={<Home/>} />
+          <Route path='/cart' element={<Cart/>} />
         </Routes>
       </div>
     </Router>

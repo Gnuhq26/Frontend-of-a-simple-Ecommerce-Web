@@ -112,8 +112,8 @@ const Navbar = () => {
             group-hover:text-primary absolute
             top-1/2 -translate-y-1/2 right-3' />
           </div>
-        {/* order button */}
-        <Link to="/login">
+        {/* Cart button */}
+        <Link to="/cart">
           <button
             className='bg-gradient-to-r from-primary
             to-secondary transition-all duration-200
@@ -122,7 +122,7 @@ const Navbar = () => {
           >
             <span className='group-hover:block
             hidden transition-all duration-200'>
-              Order
+              Cart 
             </span>
             <FaCartShopping className='text-xl
               text-white drop-shadow-sm
