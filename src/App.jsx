@@ -3,7 +3,6 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar/Navbar';
 import AOS from "aos";
 import 'aos/dist/aos.css';
-import Login from './components/Login/Login';
 import Home from './components/Home/Home';
 
 
@@ -24,7 +23,6 @@ const App = () => {
         <Navbar/>
         <Routes>
           <Route path='/' element={<Home/>} />
-          <Route path='/login' element={<Login/>} />
         </Routes>
       </div>
     </Router>
