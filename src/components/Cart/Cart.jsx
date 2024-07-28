@@ -10,14 +10,14 @@ const CartPage = () => {
         id: 1,
         image: Img1,
         title: 'Men Green Solid Zippered Full-Zip Slim Fit Bomber Jacket',
-        price: 82, 
+        price: 80, 
         quantity: 2 
     },
     { 
         id: 2,
         image: Img2, 
         title: 'Men Green Solid Zippered Full-Zip Slim Fit Bomber Jacket', 
-        price: 72, 
+        price: 70, 
         quantity: 1 
     },
     { 
